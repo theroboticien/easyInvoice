@@ -75,5 +75,5 @@ L'application est entièrement autonome et s'exécute côté client, il n'y a pa
 
 ## 📄 Licence
 
-Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails. *(Note : Si vous n'avez pas de fichier LICENSE, vous devriez en créer un ou supprimer cette ligne.)*
+Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails. 
 
