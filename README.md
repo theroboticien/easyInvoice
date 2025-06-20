@@ -76,11 +76,11 @@ L'application est entièrement autonome et s'exécute côté client, il n'y a pa
 * **jsPDF** : Une bibliothèque JavaScript pour générer des PDFs côté client.
 * **jsPDF-AutoTable** : Un plugin pour jsPDF facilitant la création de tableaux dans les PDFs.
 
-## Licence
+## 📄 Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails. 
 
-## 📝 Note importante
+## Note importante
 
 Ce projet a été principalement développé en adoptant une approche de "vibe coding", privilégiant l'intuition et l'expérimentation rapide pour donner vie aux fonctionnalités.
 
