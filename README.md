@@ -10,7 +10,7 @@
 5.  [Structure du projet](#-structure-du-projet)
 6.  [Technologies utilisées](#technologies-utilisees)
 7.  [Licence](#-Licence)
-8.  [Note Importante](#-note)
+8.  [Note Importante](#note-importante)
 
 ---
 
