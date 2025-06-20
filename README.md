@@ -52,18 +52,11 @@ Conçue pour la simplicité et l'efficacité, l'application est entièrement bas
 
 Pour faire fonctionner Influencer EasyInvoice sur votre machine locale :
 
-1.  **Clonez le dépôt :**
-    ```bash
-    git clone https://github.com/theroboticien/easyInvoice.git
-    ```
+1. Téléchargez la dernière version : Rendez-vous sur la page des releases GitHub du projet et téléchargez le fichier ZIP de la dernière version (par exemple, easyInvoice-v1.0.0.zip).
 
-2.  **Accédez au répertoire du projet :**
-    ```bash
-    cd easyinvoice
-    ```
+2. Dézippez le fichier : Extrayez le contenu de l'archive ZIP dans un dossier de votre choix sur votre ordinateur.
 
-3.  **Ouvrez le fichier HTML :**
-    Ouvrez simplement le fichier `easyInvoice.html` dans votre navigateur web.
+3. Ouvrez l'application : Dans le dossier dézippé, ouvrez simplement le fichier easyInvoice.html avec votre navigateur web préféré (Chrome, Firefox, Edge, Safari, etc.).
 
 L'application est entièrement autonome et s'exécute côté client, il n'y a pas de dépendances serveur à installer !
 
