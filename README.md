@@ -9,8 +9,7 @@
 4.  [Installation locale](#-installation-locale)
 5.  [Structure du projet](#-structure-du-projet)
 6.  [Technologies utilisées](#-technologies-utilisées)
-7.  [Contribuer](#-contribuer)
-8.  [Contact](#-contact)
+7.  [Licence](#-Licence)
 
 ---
 
