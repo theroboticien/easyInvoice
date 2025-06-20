@@ -82,6 +82,5 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 
 ## Note importante
 
-Ce projet a été principalement développé en adoptant une approche de "vibe coding", privilégiant l'intuition et l'expérimentation rapide pour donner vie aux fonctionnalités, en utilisant principalement des LLMs.
-L'idée c'est de créé une application complete aussi simplictique quel est afin de voir et comprendre l'interet de ces outils, et de partager le code avec d'autre personne qui peuvent etre interessé de voir le resultat
+Ce projet a été principalement développé en adoptant une approche de "vibe coding", privilégiant l'intuition et l'expérimentation rapide pour donner vie aux fonctionnalités, en utilisant principalement des LLM. L'idée, c'est de créer une application complète aussi simpliste qu'elle est, afin de voir et comprendre l'intérêt de ces outils, et de partager le code avec d'autres personnes qui pourraient être intéressées de voir le résultat. 
 
