@@ -8,7 +8,7 @@
 3.  [Comment utiliser](#-comment-utiliser)
 4.  [Installation locale](#-installation-locale)
 5.  [Structure du projet](#-structure-du-projet)
-6.  [Technologies utilisées](#-technologies-utilisées)
+6.  [Technologies utilisées](#technologies-utilisees)
 7.  [Licence](#-Licence)
 
 ---
