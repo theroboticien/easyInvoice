@@ -10,8 +10,7 @@
 5.  [Structure du projet](#-structure-du-projet)
 6.  [Technologies utilisées](#-technologies-utilisées)
 7.  [Contribuer](#-contribuer)
-8.  [Licence](#-licence)
-9.  [Contact](#-contact)
+8.  [Contact](#-contact)
 
 ---
 
