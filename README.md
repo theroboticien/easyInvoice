@@ -10,8 +10,11 @@
 5.  [Structure du projet](#-structure-du-projet)
 6.  [Technologies utilisées](#technologies-utilisees)
 7.  [Licence](#-Licence)
+8.  [Note Importante](#-note)
 
 ---
+
+
 
 ## 💡 À propos
 
@@ -76,4 +79,8 @@ L'application est entièrement autonome et s'exécute côté client, il n'y a pa
 ## 📄 Licence
 
 Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de détails. 
+
+## 📝 Note Importante
+
+Ce projet a été principalement développé en adoptant une approche de "vibe coding", privilégiant l'intuition et l'expérimentation rapide pour donner vie aux fonctionnalités.
 
