@@ -66,24 +66,6 @@ Pour faire fonctionner Influencer EasyInvoice sur votre machine locale :
 
 L'application est entièrement autonome et s'exécute côté client, il n'y a pas de dépendances serveur à installer !
 
-## 📂 Structure du projet
-
-├── css/
-│   └── style.css            # Styles CSS de l'application
-├── js/
-│   ├── calculations.js      # Logique de calcul (HT, TVA, TTC)
-│   ├── csv_utils.js         # Fonctions pour l'import/export CSV
-│   ├── dom_elements.js      # Centralisation des références aux éléments DOM
-│   ├── event_listeners.js   # Gestion des événements utilisateur
-│   ├── local_storage.js     # Fonctions de sauvegarde/chargement des données
-│   ├── main.js              # Point d'entrée principal de l'application
-│   └── pdf_generator.js     # Logique de génération du PDF (avec jsPDF)
-├── lib/
-│   ├── jspdf.umd.min.js     # Bibliothèque jsPDF pour la génération de PDF
-│   └── jspdf.plugin.autotable.min.js # Plugin jsPDF pour les tableaux
-├── easyInvoice.html         # Fichier HTML principal de l'application
-├── README.md                # Ce fichier
-└── placeholder_screenshot.png # Exemple de capture d'écran
 
 ## 🛠️ Technologies utilisées
 
