@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Influencer EasyInvoice</title>
+    <script src="lib/jspdf.umd.min.js"></script>
+    <script src="lib/jspdf.plugin.autotable.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Influencer EasyInvoice</h1>
+
+        <div class="info-group">
+            <div class="section">
+                <h2>Informations Société</h2>
+                <div class="file-inputs-container">
+                    <div class="file-input-wrapper">
+                        <label for="companyCsvUpload">Charger infos Société:</label>
+                        <input type="file" id="companyCsvUpload" accept=".csv">
+                    </div>
+                    <div class="file-input-wrapper">
+                        <label for="companyLogo">Logo Société:</label>
+                        <input type="file" id="companyLogo" accept="image/*">
+                    </div>
+                </div>
+
+                <label for="companyName">Nom de la société:</label>
+                <input type="text" id="companyName" value="Ma Société SA" disabled>
+
+                <label for="companyAddress">Siège Social:</label>
+                <input type="text" id="companyAddress" value="123 Rue de l'Innovation, 75001 Paris" disabled>
+
+                <label for="companyTvaIntra">N° TVA intracommunautaire (Société):</label>
+                <input type="text" id="companyTvaIntra" value="FR01234567890" disabled>
+
+                <label for="companySiret">SIRET:</label>
+                <input type="text" id="companySiret" value="987 654 321 00020" disabled>
+
+                <label for="companyEmail">Email Société:</label>
+                <input type="email" id="companyEmail" value="contact@masociete.fr" disabled>
+            </div>
+
+            <div class="section">
+                <h2>Informations Client</h2>
+
+                <div id="clientImportCsvWrapper">
+                    <div class="file-input-wrapper">
+                        <label for="clientCsvUpload">Importer Clients (CSV):</label>
+                        <input type="file" id="clientCsvUpload" accept=".csv">
+                    </div>
+                </div>
+
+                <div class="checkbox-group">
+                    <input type="checkbox" id="isCompanyCheckbox" checked>
+                    <label for="isCompanyCheckbox">Le client est une société</label>
+                </div>
+
+                <label for="clientName">Nom du Client:</label>
+                <div id="clientNameWrapper">
+                    <select id="clientNameSelect" class="client-name-field">
+                        </select>
+                    <input type="text" id="clientNameInput" class="client-name-field" style="display: none;" placeholder="Nom du particulier">
+                </div>
+
+                <label for="clientAddress">Adresse:</label>
+                <input type="text" id="clientAddress">
+
+                <div id="companyClientFields">
+                    <label for="clientSiret">SIRET:</label>
+                    <input type="text" id="clientSiret">
+
+                    <label for="clientTvaIntra">N° TVA intracommunautaire (Client):</label>
+                    <input type="text" id="clientTvaIntra">
+                </div>
+
+                <div id="individualClientFields" style="display: none;">
+                    <label for="clientPhone">Numéro de téléphone:</label>
+                    <input type="text" id="clientPhone">
+
+                    <label for="clientEmail">Email Client:</label>
+                    <input type="email" id="clientEmail">
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Détails de la Facture</h2>
+            <div class="invoice-detail-group">
+                <label for="invoiceNumber">N° Facture:</label>
+                <input type="text" id="invoiceNumber" value="FA-2025-001">
+            </div>
+
+            <div class="checkbox-group" style="margin-top: 5px; margin-bottom: 15px;">
+                <input type="checkbox" id="autoIncrementInvoiceNumber" checked>
+                <label for="autoIncrementInvoiceNumber">Augmentation auto du N° Facture après téléchargement</label>
+            </div>
+
+            <div class="invoice-detail-group">
+                <label for="invoiceDate">Date:</label>
+                <input type="date" id="invoiceDate" value="2025-06-19">
+            </div>
+
+            <div class="checkbox-group" style="margin-top: 15px;">
+                <input type="checkbox" id="isCorrectionInvoice">
+                <label for="isCorrectionInvoice">Facture corrective (Annule et remplace)</label>
+            </div>
+
+            <div id="originalInvoiceNumberGroup" class="invoice-detail-group" style="display: none;">
+                <label for="originalInvoiceNumber">N° Facture Originale:</label>
+                <input type="text" id="originalInvoiceNumber" placeholder="Numéro de la facture à remplacer">
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Article Unique</h2>
+            <div id="itemsContainer">
+                </div>
+        </div>
+
+        <div class="section">
+            <h2>Obligations légales</h2>
+            <label for="mentionsLegales">Mentions légales:</label>
+            <textarea id="mentionsLegales" rows="4" disabled>Pas de pénalité de retard en cas de retard de paiement toutefois une indemnité forfaitaire de 40 € pour frais de recouvrement sera facturé (article D. 441-5 du code du Commerce)</textarea>
+
+            <div class="checkbox-group" style="margin-top: 15px;">
+                <input type="checkbox" id="showExonerationTva" checked>
+                <label for="showExonerationTva">Afficher l'exonération de TVA sur le PDF</label>
+            </div>
+            <label for="exonerationTvaText">Texte d'exonération de TVA:</label>
+            <textarea id="exonerationTvaText" rows="2" disabled>Exonération de TVA, article 283-2 du Code général des impôts</textarea>
+        </div>
+
+        <div class="section totals">
+            <h2>Prix calculés</h2>
+            <label for="tva">TVA (%):</label>
+            <select id="tva">
+                <option value="0" selected>0%</option>
+                <option value="5">5%</option>
+                <option value="10">10%</option>
+                <option value="20">20%</option>
+            </select>
+
+            <p>Total HT: <span id="subTotal">0.00 €</span></p>
+            <p>TVA: <span id="taxAmount">0.00 €</span></p>
+            <h3>Total TTC: <span id="grandTotal">0.00 €</span></h3>
+        </div>
+
+        <div class="actions">
+            <button id="previewPdfBtn">Prévisualiser le PDF</button>
+            <button id="generatePdfBtn">Télécharger le PDF</button>
+            <button id="exportCsvBtn">Exporter la facture (CSV)</button>
+            <div class="file-input-wrapper">
+                <label for="invoiceCsvUpload">Importer la facture (CSV):</label>
+                <input type="file" id="invoiceCsvUpload" accept=".csv">
+            </div>
+        </div>
+
+        <div id="pdfPreview" class="pdf-preview">
+            <h2>Prévisualisation PDF</h2>
+            <iframe id="pdfFrame"></iframe>
+        </div>
+    </div>
+
+    <script src="js/dom_elements.js"></script>
+    <script src="js/local_storage.js"></script>
+    <script src="js/calculations.js"></script>
+    <script src="js/csv_utils.js"></script>
+    <script src="js/pdf_generator.js"></script>
+    <script src="js/event_listeners.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
