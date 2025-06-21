@@ -1,5 +1,6 @@
 # 🌟 Influencer EasyInvoice 🌟
 
+
 ![Capture d'écran de l'application](placeholder_screenshot.png) 
 
 ## Table des matières
